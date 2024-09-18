@@ -8,7 +8,7 @@ import numpy as np
 _ = load_dotenv('api_keys.env')
 client = OpenAI(
     # This is the default and can be omitted
-    api_key=os.environ.get('openai_api_key'),
+    api_key=os.environ.get('openai_apikey'),
 )
 
 with open('movie_descriptions_embeddings.json', 'r') as file:
