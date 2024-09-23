@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <h2>Movie Recommendations</h2>
+    <form action="{% url 'recommendation:search_recommendations' %}" method="get">
+        <div class="mb-3">
+            <label for="query" class="form-label">Enter a movie title or description:</label>
+            <input type="text" class="form-control" id="query" name="query" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Get Recommendations</button>
+    </form>
+</div>
+{% endblock %}
